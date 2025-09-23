@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование браузерных пушей</title>
+    <script src="https://pxl.demo.altcraft.com/ak_container.js?id=MTgxfDE=" ></script>
+    <script src=https://pxl.demo.altcraft.com/form/js/embed_v1.js></script>
+</head>
+<body>
+
+    <p>Урок 5. Тестирование браузерных пушей</p>
+
+    <button id="init_sub">Подписаться на уведомления</button>
+    
+    <script>
+        document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
+        try {
+            var akPush = new AKPush();
+            akPush.initSubscription() // Покажет форму для подписки
+            }
+        catch (e) {
+            console.log(e); // В случае ошибки выведет сообщение в консоль
+            }
+        });
+    </script> 
+    <iframe src="https://pxl.demo.altcraft.com/form?form=8NJf1mCeuRv75dBenr42Gi6Nhk4n2CcwCfNp349eJ7FasHFqtzpj4HUd4nstZb7WWS5z2nDVrWk3TouSCFBWxByi&iframe=1" frameborder="0" name="ak-form-8NJf1mCeuRv75dBenr42Gi6Nhk4n2CcwCfNp349eJ7FasHFqtzpj4HUd4nstZb7WWS5z2nDVrWk3TouSCFBWxByi" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
+</body>
+</html>
